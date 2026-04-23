@@ -268,33 +268,25 @@ body { background-color: #ffffff; }
 }
 
 .news-item {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-    cursor: pointer;
-    gap: 20px;
+  display: flex;
+    align-items: center; /* Ye sabse important hai - ye text aur image ko beech mein align karega */
+    gap: 15px;           /* Image aur text ke beech thodi jagah dene ke liye */
+    margin-bottom: 20px;
 }
 
 .news-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    flex: 1;
-    min-width: 0;
+   display: flex;
+    flex-direction: column; /* Text ko upar-niche stack karne ke liye */
+    justify-content: center; /* Text ko vertically center align karne ke liye */    
 }
 
 .circle-img {
-    width: 90px;
-    min-width: 80px;
-    height: 80px;
-    background-color: #eee;
+   width: 60px;         /* Aap size adjust kar sakte hain */
+    height: 60px;
     border-radius: 50%;
-    margin: 0;
-    transition: transform 0.4s ease;    object-fit: cover;
-    display: block;}
+    object-fit: cover;   /* Image ko stretch hone se bachane ke liye */
+    flex-shrink: 0;
+}
 
 /* Hover Animation: Image rotate hogi */
 .news-item:hover .circle-img {
@@ -310,16 +302,23 @@ body { background-color: #ffffff; }
 }
 
 .news-item:hover p {
-    color: #b01b1b; /* NASA Red color on hover */
+    color: #000000; /* NASA Red color on hover */
+}
+
+.read-time {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 .read-time, .tag {
     font-size: 11px;
     color: #888;
     text-transform: uppercase;
+    text-align: justify;
 }
 /* Resetting default styles */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -328,7 +327,7 @@ body { background-color: #ffffff; }
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     color: white;
-}
+} */
 
 .artemis-section {
     height: 100vh;
@@ -339,35 +338,117 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center; /* Vertical center */
-    padding-left: 80px;  /* Left side se spacing */
+    align-items: center; 
+    padding-left: 150px;  /* Left side se spacing */
 }
 
 .content {
     max-width: 500px;
 }
 
-h1 {
+.h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-p {
+.p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
     opacity: 0.9;
-}
+} 
 
 .link {
-    color: #ff3333; /* Red/Orange color */
+    color: #ff3333; 
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
     display: inline-block;
-}
+} 
 
 .link:hover {
     text-decoration: underline;
+}  
+/* General Styling */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+} */
+
+/* body {
+    background-color: #000; 
+    color: #fff;
+} */
+
+.hero-section {
+    padding: 50px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text Side */
+.text-content {
+    flex: 1;
+    text-decoration-style: dotted;
+    text-wrap-mode: wrap;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.cta-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.cta-link:hover {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+}
+
+/* Image Side */
+.image-content {
+    flex: 1;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Thoda soft look dene ke liye */
+}
+
+/* --- MOBILE RESPONSIVE (Media Query) --- */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Mobile pe upar-neeche stack ho jayega */
+        text-align: left;
+        padding: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
 }
