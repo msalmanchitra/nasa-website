@@ -9,15 +9,26 @@
 <body>
 
     <nav class="navbar">
+        <!-- Mobile Search Icon (Left) -->
+        <div class="mobile-search-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+        </div>
+
+        <!-- Desktop Left Navigation -->
         <div class="nav-left">
             <span class="nav-link">Explore ▾</span>
             <input type="text" class="search-input" placeholder="Search">
         </div>
 
+        <!-- Center Logo -->
         <div class="nav-center">
             <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA Logo" class="logo">
         </div>
 
+        <!-- Desktop Right Navigation -->
         <div class="nav-right">
             <span class="nav-link">News & Events ▾</span>
             <span class="nav-link">Multimedia ▾</span>
@@ -25,7 +36,44 @@
                 NASA+ <span class="live-badge">LIVE</span>
             </a>
         </div>
+
+        <!-- Mobile Hamburger Menu -->
+        <div class="hamburger-menu" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Mobile Menu Links -->
+        <div class="mobile-menu" id="mobileMenu">
+            <span class="nav-link">Explore ▾</span>
+            <span class="nav-link">News & Events ▾</span>
+            <span class="nav-link">Multimedia ▾</span>
+            <a href="#" class="live-container-mobile">
+                NASA+ <span class="live-badge">LIVE</span>
+            </a>
+            <input type="text" class="search-input-mobile" placeholder="Search">
+        </div>
     </nav>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('.nav-link, .live-container-mobile');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+            });
+        });
+    </script>
     <section class="hero-section">
         <img src="https://www.slashgear.com/img/gallery/this-revolutionary-new-spaceplane-could-redefine-nasas-approach-to-spacecraft/l-intro-1698965459.jpg" alt="NASA Hero Image" class="hero-image">
         <div class="hero-content">
@@ -60,7 +108,7 @@
     </section>
     <section class="bottom-news-section">
     <div class="news-item">
-        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="NASA logo" class="circle-img">
+        <img src="https://mars.nasa.gov/layout/mars2020/images/PIA23764-RoverNamePlateonMars-web.jpg" alt="NASA logo" class="circle-img">
         <div class="news-content">
             <span class="read-time">2 MIN READ</span>
             <p>NASA Begins Implementation for ESA’s Rosalind Franklin Mission to Mars</p>
@@ -69,7 +117,7 @@
     </div>
 
     <div class="news-item">
-        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="NASA logo" class="circle-img">
+        <img src="https://bloximages.newyork1.vip.townnews.com/thepress.net/content/tncms/assets/v3/editorial/0/ec/0ec1cf3a-d2ab-5367-b3e9-a54b7a8939c0/69e10ea94bb2c.image.jpg?crop=1920%2C1008%2C0%2C35&resize=1200%2C630&order=crop%2Cresize" alt="NASA logo" class="circle-img">
             <span class="read-time">2 MIN READ</span>
             <p>NASA's Parker Solar Probe Finds Surprises in an Explosion Near the Sun</p>
             <span class="tag">BLOG</span>
@@ -77,7 +125,7 @@
     </div>
 
     <div class="news-item">
-        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="NASA logo" class="circle-img">
+        <img src="https://tse2.mm.bing.net/th/id/OIF.rr4hrAvgTin7YIP7VkSWzw?pid=Api&h=220&P=0" alt="NASA logo" class="circle-img">
         <div class="news-content">
             <span class="read-time">6 MIN READ</span>
             <p>‘Interstellar Glaciers’: NASA’s SPHEREx Maps Vast Galactic Ice Regions</p>
@@ -86,7 +134,7 @@
     </div>
 
     <div class="news-item">
-        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="NASA logo" class="circle-img">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.rC6vH2CE25s0XD8QQZkkWQAAAA?pid=Api&h=220&P=0" alt="NASA logo" class="circle-img">
         <div class="news-content">
             <span class="read-time">3 MIN READ</span>
             <p>What's Up: April 2026 Skywatching Tips from NASA</p>
@@ -94,5 +142,12 @@
         </div>
     </div>
 </section>
+<section class="artemis-section">
+        <div class="content">
+            <h1>Artemis</h1>
+            <p>Under Artemis, NASA will send astronauts on increasingly difficult missions to explore more of the Moon for scientific discovery, economic benefits, and to build on our foundation for the first crewed missions to Mars.</p>
+            <a href="#" class="link">Moon to Mars →</a>
+        </div>
+    </section>
 </body>
 </html>
