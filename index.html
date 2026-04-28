@@ -1,51 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASA Navbar Clone</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-menu">
+        <a href="#">Explore ▼</a>
+        <input type="text" placeholder="Search" class="nav-search">
+      </div>
+    </div>
+    
+    <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA" class="logo">
+    
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#">News & Events ▼</a>
+        <a href="#">Multimedia ▼</a>
+        <a href="#">NASA+ <span class="live">LIVE</span></a>
+      </div>
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35"></path>
+      </svg>
+    </div>
+  </nav>
 
-    <nav class="navbar">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <button class="pause-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <rect x="6" y="4" width="4" height="16"></rect>
+          <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+      </button>
+
+      <h1>The Next Era of NASA Starts with You</h1>
+      
+      <p>NASA Force is a new hiring initiative, created with the U.S. Office of Personnel Management, to recruit exceptional technical talent for mission-critical roles supporting NASA's exploration, research, and advanced technology work.</p>
+      
+      <a href="#" class="hero-btn">NASA Force Opportunities</a>
+      
+      <div class="hero-links">
+        <div class="link-item">
+          <span class="link-subtitle">FOR THE BENEFIT OF ALL</span>
+          <a href="#" class="link-main">
+            Careers at NASA 
+            <span class="arrow-circle">→</span>
+          </a>
+        </div>
+        <div class="link-item">
+          <span class="link-subtitle">EXPLORE WITH US</span>
+          <a href="#" class="link-main">
+            How to Apply 
+            <span class="arrow-circle">→</span>
+          </a>
+        </div>
+        <div class="link-item">
+          <span class="link-subtitle">INSPIRE THE WORLD</span>
+          <a href="#" class="link-main">
+            Life at NASA 
+            <span class="arrow-circle">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+    <!-- <nav class="navbar"> -->
         <!-- Mobile Search Icon (Left) -->
-        <div class="mobile-search-icon">
+        <!-- <div class="mobile-search-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.35-4.35"></path>
             </svg>
-        </div>
+        </div> -->
 
         <!-- Desktop Left Navigation -->
-        <div class="nav-left">
+        <!-- <div class="nav-left">
             <span class="nav-link">Explore ▾</span>
             <input type="text" class="search-input" placeholder="Search">
-        </div>
+        </div> -->
 
         <!-- Center Logo -->
-        <div class="nav-center">
+        <!-- <div class="nav-center">
             <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA Logo" class="logo">
-        </div>
+        </div> -->
 
         <!-- Desktop Right Navigation -->
-        <div class="nav-right">
+        <!-- <div class="nav-right">
             <span class="nav-link">News & Events ▾</span>
             <span class="nav-link">Multimedia ▾</span>
             <a href="#" class="live-container">
                 NASA+ <span class="live-badge">LIVE</span>
             </a>
-        </div>
+        </div> -->
 
         <!-- Mobile Hamburger Menu -->
-        <div class="hamburger-menu" id="hamburgerBtn">
+        <!-- <div class="hamburger-menu" id="hamburgerBtn">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </div> -->
 
         <!-- Mobile Menu Links -->
-        <div class="mobile-menu" id="mobileMenu">
+        <!-- <div class="mobile-menu" id="mobileMenu">
             <span class="nav-link">Explore ▾</span>
             <span class="nav-link">News & Events ▾</span>
             <span class="nav-link">Multimedia ▾</span>
@@ -59,33 +132,9 @@
     <input type="text" placeholder="Search...">
 </div>
         </div>
-    </nav>
-
-     <script>
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        hamburgerBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            hamburgerBtn.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('.nav-link, .live-container-mobile');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                hamburgerBtn.classList.remove('active');
-            });
-           // const searchBtn = document.getElementById('searchBtn');
-//const searchBox = document.getElementById('searchBox');
-
-//searchBtn.addEventListener('click', function() {
-   // searchBox.classList.toggle('active');
-//});
-        });
-    </script>
-    <section class="hero-section">
+    </nav> -->
+    
+    <!-- <section class="hero-section">
         <img src="https://www.slashgear.com/img/gallery/this-revolutionary-new-spaceplane-could-redefine-nasas-approach-to-spacecraft/l-intro-1698965459.jpg" alt="NASA Hero Image" class="hero-image">
         <div class="hero-content">
             <h1 class="hero-text">The Next Era of NASA<br>Starts with You</h1>
@@ -96,7 +145,7 @@
             <div><small>EXPLORE WITH US</small><br><strong>How to Apply &rarr;</strong></div>
             <div><small>INSPIRE THE WORLD</small><br><strong>Life at NASA &rarr;</strong></div>
         </div>
-    </section>
+    </section> -->
 
     <section class="news-section">
         <div class="header-box"><h1>Featured News</h1> <span>Recently Published &rarr;</span></div>
