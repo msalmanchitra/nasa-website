@@ -122,8 +122,28 @@ html, body {
     padding: 10px 0;
     border-bottom: 1px solid #333;
 }
+.search-box {
+    display: none;
+}
 
-.search-input-mobile {
+.search-box.active {
+    display: block;
+}
+.searchbtn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.searchbtn:focus {
+    outline: solid 1px #ff0000;
+}
+.searchbtn:hover {
+    color: #ff0000;
+}
+
+/* .search-input-mobile {
     background: transparent;
     border: 1px solid #444;
     color: white;
@@ -136,7 +156,7 @@ html, body {
 
 .search-input-mobile::placeholder {
     color: #888;
-}
+} */
 
 .live-container-mobile {
     color: white;
@@ -159,7 +179,32 @@ html, body {
     width: 20px;
     height: 20px;
 }
+/* Default (Desktop) */
+#mobileMenu {
+    display: none;
+}
 
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+
+    #hamburgerBtn {
+        display: block;
+    }
+
+    #mobileMenu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: black;
+        z-index: 1000;
+    }
+
+    #mobileMenu.active {
+        display: block;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
