@@ -9,7 +9,20 @@
   background: #000;
   color: #fff;
 } */
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
 
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  /* background: #000; */
+  color: #fff;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
 /* ===== NAVBAR - MOBILE ===== */
 .navbar {
   display: flex;
@@ -81,6 +94,7 @@
   z-index: 2;
   padding: 16px;
   width: 100%;
+  text-align: left;
 }
 
 .pause-btn {
@@ -109,6 +123,7 @@
   margin-bottom: 14px;
   letter-spacing: -0.3px;
   color: #fff;
+  text-align: left;
 }
 
 .hero-content p {
@@ -117,6 +132,7 @@
   margin-bottom: 22px;
   color: #ddd;
   font-weight: 400;
+  text-align: left;
 }
 
 .hero-btn {
@@ -627,13 +643,13 @@ html, body {
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; } */
 
 /* Navbar */
-/* .navbar { background: #000; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; }
+/*.navbar { background: #000; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; }
 .navbar input { background: transparent; border: 1px solid #444; color: white; padding: 5px; }
 .nav-center img { height: 40px; }
-.live-btn span { background: #d11d1d; padding: 2px 6px; margin-left: 5px; } */
+.live-btn span { background: #d11d1d; padding: 2px 6px; margin-left: 5px; } 
 
 /* Hero */
-/* .hero-section { position: relative; width: 100%; height: 90vh; padding: 80px; color: white; background-color: #000; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; } 
+ /*.hero-section { position: relative; width: 100%; height: 90vh; padding: 80px; color: white; background-color: #000; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; } 
 .hero-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.6; }
 .hero-content { position: relative; z-index: 1; margin-top: 100px; }
 .hero-text { font-size: 18px; color: #ddd; margin-bottom: 20px; color: #ffffff; text-shadow: 0 0 10px rgba(8, 8, 8, 0.7); }
@@ -645,7 +661,7 @@ html, body {
 .hero-footer { position: relative; z-index: 1; display: flex; gap: 50px; } 
 .hero-footer div { display: flex; flex-direction: column; }
 .hero-footer div span { font-size: 12px; color: #777; margin-bottom: 5px; }
-.hero-footer div p { font-size: 16px; font-weight: bold; color: #fff; }  */
+.hero-footer div p { font-size: 16px; font-weight: bold; color: #fff; }  
 
 .news-section {
   width: 90%;
@@ -780,17 +796,21 @@ html, body {
 }
 
 /* ✅ header-box کی colon غلطی درست */
+
 .header-box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px; /* ← یہاں پر درست colon ہے */
+  margin-bottom: 20px; /
 }
-
+.header-image{
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+}
 .header-box span {
   font-weight: bold;
 }
  
-/* Add this to make hover effects pop */
 .card:hover { transform: scale(1.02); transition: 0.3s; cursor: pointer; }
 .bottom-news-section {
     display: flex;
@@ -803,23 +823,23 @@ html, body {
 
 .news-item {
   display: flex;
-    align-items: center; /* Ye sabse important hai - ye text aur image ko beech mein align karega */
-    gap: 15px;           /* Image aur text ke beech thodi jagah dene ke liye */
+    align-items: center; 
+    gap: 15px;           
     margin-bottom: 20px;
 }
 
 .news-content {
    display: flex;
-    flex-direction: column; /* Text ko upar-niche stack karne ke liye */
-    justify-content: center; /* Text ko vertically center align karne ke liye */ 
+    flex-direction: column; 
+    justify-content: center; 
     color: #000;   
 }
 
 .circle-img {
-   width: 60px;         /* Aap size adjust kar sakte hain */
+   width: 60px;         
     height: 60px;
     border-radius: 50%;
-    object-fit: cover;   /* Image ko stretch hone se bachane ke liye */
+    object-fit: cover;   
     flex-shrink: 0;
 }
 
@@ -838,7 +858,7 @@ html, body {
 
 .news-item p {
     color: #000000 !important; /* NASA Red color on hover */
-}
+
 
 .read-time {
     font-size: 12px;
@@ -857,30 +877,19 @@ html, body {
         flex-direction: column;
         gap: 30px;
     }
-}
-/* Resetting default styles */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: white;
 } */
 
+ 
 .artemis-section {
     height: 100vh;
     width: 100%;
-    /* Yahan apni image ka naam likhein */
     background-image: url('artemis.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center; 
-    padding-left: 150px;  /* Left side se spacing */
+    padding-left: 150px;  
 }
 
 .content {
@@ -921,14 +930,11 @@ body {
   padding-left: 80px;
 }
 
-/* Dark overlay for text visibility */
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
 }
-
-/* TEXT */
 .content {
   position: relative;
   max-width: 550px;
@@ -948,7 +954,6 @@ body {
   margin-bottom: 25px;
 }
 
-/* BUTTON */
 .btn {
   width: 35px;
   height: 35px;
@@ -964,7 +969,7 @@ body {
     flex-direction: column;
     gap: 30px;
   }
-}
+} */
 * {
   margin: 0;
   padding: 0;
@@ -1568,4 +1573,5 @@ p { font-size: 14px; color: #ccc; margin-bottom: 15px; }
 /* Responsive */
 @media (max-width: 1024px) {
     .footer-content { flex-direction: column; }
+    .col { min-width: 100%; }
 }
