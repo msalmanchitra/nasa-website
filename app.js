@@ -1,22 +1,21 @@
- const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const searchIcon = document.getElementById('searchIcon');
+    const mobileSearchBar = document.getElementById('mobileSearchBar');
+    const closeSearch = document.getElementById('closeSearch');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      mobileSearchBar.classList.remove('active');
+    });
 
-        hamburgerBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            hamburgerBtn.classList.toggle('active');
-        });
+    searchIcon.addEventListener('click', () => {
+      mobileSearchBar.classList.toggle('active');
+      mobileMenu.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
 
-        // Close menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('.nav-link, .live-container-mobile');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                hamburgerBtn.classList.remove('active');
-            });
-           // const searchBtn = document.getElementById('searchBtn');
-//const searchBox = document.getElementById('searchBox');
-
-//searchBtn.addEventListener('click', function() {
-   // searchBox.classList.toggle('active');
-//});
-        });
+    closeSearch.addEventListener('click', () => {
+      mobileSearchBar.classList.remove('active');
+    });

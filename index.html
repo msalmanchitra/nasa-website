@@ -3,500 +3,340 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NASA website</title>
+  <title>Humans in Space - NASA</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+ <header class="nasa-header">
+    <div class="header-container">
+      <!-- Left Side -->
+      <div class="header-left">
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <button class="explore-btn desktop-only">
+          Explore
+          <svg class="circle-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 10L12 14L16 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        
+        <div class="search-box desktop-only">
+          <input type="text" placeholder="Search">
+        </div>
       </div>
-      <div class="nav-menu">
-        <a href="#">Explore ▼</a>
-        <input type="text" placeholder="Search" class="nav-search">
-      </div>
-    </div>
-    
-    <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA" class="logo">
-    
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="#">News & Events ▼</a>
-        <a href="#">Multimedia ▼</a>
-        <a href="#">NASA+ <span class="live">LIVE</span></a>
-      </div>
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="8"></circle>
-        <path d="m21 21-4.35"></path>
-      </svg>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+      <!-- Center Logo -->
+      <div class="header-center">
+        <a href="#" class="logo">
+          <img src="https://cdn.wallpapersafari.com/45/43/nWKNt3.png" alt="NASA">
+        </a>
+      </div>
+
+      <!-- Right Side -->
+      <div class="header-right">
+        <nav class="desktop-nav desktop-only">
+          <a href="#" class="nav-link">
+            News & Events
+            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            </svg>
+          </a>
+          <a href="#" class="nav-link">
+            Multimedia
+            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            </svg>
+          </a>
+          <a href="#" class="nav-link nasa-plus">
+            NASA+
+            <span class="live-badge">LIVE</span>
+          </a>
+        </nav>
+
+        <!-- Mobile Search Icon -->
+        <button class="search-icon-btn mobile-only" id="searchIcon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Search Bar -->
+    <div class="mobile-search-bar" id="mobileSearchBar">
+      <input type="text" placeholder="Search">
+      <button class="close-search" id="closeSearch">✕</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="#" class="mobile-link">Explore</a>
+        <a href="#" class="mobile-link">News & Events</a>
+        <a href="#" class="mobile-link">Multimedia</a>
+        <a href="#" class="mobile-link">NASA+ <span class="live-badge">LIVE</span></a>
+      </nav>
+    </div>
+  </header>
+<!-- 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const searchIcon = document.getElementById('searchIcon');
+    const mobileSearchBar = document.getElementById('mobileSearchBar');
+    const closeSearch = document.getElementById('closeSearch');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      mobileSearchBar.classList.remove('active');
+    });
+
+    searchIcon.addEventListener('click', () => {
+      mobileSearchBar.classList.toggle('active');
+      mobileMenu.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+
+    closeSearch.addEventListener('click', () => {
+      mobileSearchBar.classList.remove('active');
+    });
+  </script> -->
+
+  <section class="hero-section">
     <div class="hero-overlay"></div>
+    <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1920" alt="Space Station" class="hero-bg">
     
     <div class="hero-content">
-      <button class="pause-btn">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <rect x="6" y="4" width="4" height="16"></rect>
-          <rect x="14" y="4" width="4" height="16"></rect>
+      <h1>Humans in Space</h1>
+      <p>The Roscosmos Soyuz MS-29 mission, targeted to launch on Tuesday, July 14, will carry NASA astronaut Anil Menon and Roscosmos cosmonauts Pyotr Dubrov and Anna Kikina to the International Space Station for an eight-month stay as part of Expeditions 74 and 75.</p>
+      <a href="#" class="hero-btn">Roscosmos Soyuz MS-29</a>
+    </div>
+
+    <div class="hero-links">
+      <a href="#" class="link-item">
+        <span class="link-category">CURRENT MISSION</span>
+        <span class="link-title">Expedition 74 <span class="arrow">→</span></span>
+      </a>
+      <a href="#" class="link-item">
+        <span class="link-category">FUTURE MISSION</span>
+        <span class="link-title">NASA's SpaceX Crew-13 <span class="arrow">→</span></span>
+      </a>
+      <a href="#" class="link-item">
+        <span class="link-category">BENEFITS FOR HUMANITY</span>
+        <span class="link-title">Space Station Updates <span class="arrow">→</span></span>
+      </a>
+    </div>
+
+    <div class="hero-controls">
+      <button class="thumb-btn">
+        <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=100" alt="thumb">
+      </button>
+      <button class="play-pause">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <rect x="4" y="3" width="3" height="10"/>
+          <rect x="9" y="3" width="3" height="10"/>
         </svg>
       </button>
+    </div>
+  </section>
+  <section class="featured-news">
+    <div class="news-header">
+      <h1 class="news-title">Featured News</h1>
+      <a href="#" class="recent-link">Recently Published <span class="arrow">→</span></a>
+    </div>
 
-      <h1>The Next Era of NASA Starts with You</h1>
-      
-      <p>NASA Force is a new hiring initiative, created with the U.S. Office of Personnel Management, to recruit exceptional technical talent for mission-critical roles supporting NASA's exploration, research, and advanced technology work.</p>
-      
-      <a href="#" class="hero-btn">NASA Force Opportunities</a>
-      
-      <div class="hero-links">
-        <div class="link-item">
-          <span class="link-subtitle">FOR THE BENEFIT OF ALL</span>
-          <a href="#" class="link-main">
-            Careers at NASA 
-            <span class="arrow-circle">→</span>
-          </a>
+    <!-- Top Cards Grid -->
+    <div class="news-grid">
+      <!-- Card 1 - Large Left -->
+      <article class="news-card large">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900" alt="Artemis">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <span class="card-tag">◎ BLOG</span>
+          <span class="read-time">4 MIN READ</span>
+          <h2>NASA's Artemis III Moon Rocket Hardware Arrives, Artemis II Capsule Returns to Kennedy</h2>
         </div>
-        <div class="link-item">
-          <span class="link-subtitle">EXPLORE WITH US</span>
-          <a href="#" class="link-main">
-            How to Apply 
-            <span class="arrow-circle">→</span>
-          </a>
+      </article>
+
+      <!-- Card 2 - Medium Center -->
+      <article class="news-card medium">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.EqNYrKNWe8-H-xlQiVGuGQHaEK?pid=Api&h=220&P=0" alt="Astronaut">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <span class="card-tag">◎ BLOG</span>
+          <span class="read-time">3 MIN READ</span>
+          <h2>Quantum Physics, Biomedicine, and Computer Gear Fill Wednesday's Schedule</h2>
         </div>
-        <div class="link-item">
-          <span class="link-subtitle">INSPIRE THE WORLD</span>
-          <a href="#" class="link-main">
-            Life at NASA 
-            <span class="arrow-circle">→</span>
-          </a>
+      </article>
+
+      <!-- Right Column - 2 Small Cards -->
+      <div class="small-cards">
+        <article class="news-card small">
+          <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=500" alt="Boeing">
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="card-tag">◎ IMAGE ARTICLE</span>
+            <span class="read-time">3 MIN READ</span>
+            <h3>NASA, Boeing Advance Truss-Braced Wing Research in Test</h3>
+          </div>
+        </article>
+
+        <article class="news-card small">
+          <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=500" alt="Landsat">
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <span class="card-tag">◎ ARTICLE</span>
+            <span class="read-time">7 MIN READ</span>
+            <h3>Nighttime Imaging Grows Landsat's Science Value</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Bottom 4 Small Articles -->
+    <div class="bottom-articles">
+      <article class="article-item">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.W2HN5CoeZO6tC9iAuPR4dgHaEf?pid=Api&h=220&P=0" alt="Thruster">
+        <div class="article-text">
+          <span class="read-time">5 MIN READ</span>
+          <h4>NASA Fires Up Powerful Lithium-Fed Thruster for Trips to Mars</h4>
+          <span class="article-tag">◎ ARTICLE</span>
         </div>
+      </article>
+
+      <article class="article-item">
+        <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=100" alt="X-59">
+        <div class="article-text">
+          <span class="read-time">4 MIN READ</span>
+          <h4>There's No Place Like NASA's New X-59 Hangar Home</h4>
+          <span class="article-tag">◎ ARTICLE</span>
+        </div>
+      </article>
+
+      <article class="article-item">
+        <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=100" alt="Mars">
+        <div class="article-text">
+          <span class="read-time">5 MIN READ</span>
+          <h4>NASA's Perseverance, Curiosity Panoramas Capture Two Sides of Mars</h4>
+          <span class="article-tag">◎ ARTICLE</span>
+        </div>
+      </article>
+
+      <article class="article-item">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100" alt="Dragonfly">
+        <div class="article-text">
+          <span class="read-time">4 MIN READ</span>
+          <h4>NASA's Dragonfly Rotorcraft Gets Decked Out, Tested</h4>
+          <span class="article-tag">◎ BLOG</span>
+        </div>
+      </article>
+    </div>
+  </section>
+    <section class="hero-red-dots">
+    <div class="hero-overlay"></div>
+    <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1920" alt="Black Hole" class="hero-bg">
+    
+    <div class="hero-content">
+      <h1>Connecting the Red Dots</h1>
+      <p>An "X-ray dot" found by NASA's Chandra X-ray Observatory may be key to understanding a new class of mysterious objects that astronomers have recently identified in the early universe.</p>
+      <a href="#" class="hero-link">
+        NASA's Chandra X-ray Observatory
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+   <section class="universe-section">
+    <div class="section-header">
+      <h1 class="section-title">Welcome to the Universe</h1>
+      <a href="#" class="discover-link">
+        Discover More
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Card 1 - Chandra -->
+      <a href="#" class="universe-card">
+        <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=600" alt="Chandra">
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <h2>Chandra Overview</h2>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 2 - James Webb -->
+      <a href="#" class="universe-card">
+        <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=600" alt="James Webb">
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <h2>James Webb<br>Space Telescope</h2>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 3 - Observatories -->
+      <a href="#" class="universe-card">
+        <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=600" alt="Observatories">
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <h2>Observatories</h2>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- Card 4 - Eyes -->
+      <a href="#" class="universe-card">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600" alt="Eyes">
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <h2>Eyes</h2>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="image-day-section">
+    <div class="content-wrapper">
+      <!-- Left Text Content -->
+      <div class="text-content">
+        <span class="today-label">TODAY</span>
+        <h1 class="main-title">Image Of The Day</h1>
+        
+        <h2 class="image-title">A Gently Glowing Galaxy</h2>
+        <p class="image-desc">The barred spiral galaxy IC 486 glows with a soft, ethereal light in this NASA Hubble Space Telescope image.</p>
+        
+        <a href="#" class="browse-link">
+          Browse Image Archive
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Right Image -->
+      <div class="image-content">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=900" alt="IC 486 Galaxy">
+          <button class="download-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 16L7 11L8.4 9.6L11 12.2V4H13V12.2L15.6 9.6L17 11L12 16ZM5 20V18H19V20H5Z"/>
+            </svg>
+          </button>
+        </div>
+        <a href="#" class="view-image-link">
+          View image
+          <span class="arrow">→</span>
+        </a>
       </div>
     </div>
   </section>
-    <!-- <nav class="navbar"> -->
-        <!-- Mobile Search Icon (Left) -->
-        <!-- <div class="mobile-search-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-            </svg>
-        </div> -->
-
-        <!-- Desktop Left Navigation -->
-        <!-- <div class="nav-left">
-            <span class="nav-link">Explore ▾</span>
-            <input type="text" class="search-input" placeholder="Search">
-        </div> -->
-
-        <!-- Center Logo -->
-        <!-- <div class="nav-center">
-            <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA Logo" class="logo">
-        </div> -->
-
-        <!-- Desktop Right Navigation -->
-        <!-- <div class="nav-right">
-            <span class="nav-link">News & Events ▾</span>
-            <span class="nav-link">Multimedia ▾</span>
-            <a href="#" class="live-container">
-                NASA+ <span class="live-badge">LIVE</span>
-            </a>
-        </div> -->
-
-        <!-- Mobile Hamburger Menu -->
-        <!-- <div class="hamburger-menu" id="hamburgerBtn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div> -->
-
-        <!-- Mobile Menu Links -->
-        <!-- <div class="mobile-menu" id="mobileMenu">
-            <span class="nav-link">Explore ▾</span>
-            <span class="nav-link">News & Events ▾</span>
-            <span class="nav-link">Multimedia ▾</span>
-            <a href="#" class="live-container-mobile">
-                NASA+ <span class="live-badge">LIVE</span>
-            </a>
-            <input type="text" class="search-input-mobile" placeholder="Search">
-             <button id="searchBtn" class="searchbtn">search</button>
-
-<div id="searchBox" class="search-box">
-    <input type="text" placeholder="Search...">
-</div>
-        </div>
-    </nav> -->
-    
-    <!-- <section class="hero-section">
-        <img src="https://www.slashgear.com/img/gallery/this-revolutionary-new-spaceplane-could-redefine-nasas-approach-to-spacecraft/l-intro-1698965459.jpg" alt="NASA Hero Image" class="hero-image">
-        <div class="hero-content">
-            <h1 class="hero-text">The Next Era of NASA<br>Starts with You</h1>
-            <button class="nasa-btn">NASA Force Opportunities</button>
-        </div>
-        <div class="hero-footer">
-            <div><small>FOR THE BENEFIT OF ALL</small><br><strong>Careers at NASA &rarr;</strong></div>
-            <div><small>EXPLORE WITH US</small><br><strong>How to Apply &rarr;</strong></div>
-            <div><small>INSPIRE THE WORLD</small><br><strong>Life at NASA &rarr;</strong></div>
-        </div>
-    </section> -->
-        <section class="news-section">
-        <div class="header-box"><h1 class="header-image">Featured News</h1> <span>Recently Published &rarr;</span></div>
-        <div class="top-grid">
-            <div class="card main-card">
-                <img src="https://dailygalaxy.com/wp-content/uploads/2026/02/Vast-and-Axiom-Secure-New-NASA-Missions-to-ISS-Accelerate-Plans-for-Commercial-Space-Stations-scaled.png.webp">
-                <h3>NASA, OPM Announce New NASA Force Website</h3></div>
-            <div class="card image-card">
-                <img src="https://tse4.mm.bing.net/th/id/OIP.YnP-0tlETA9Vov_YhDf3mwHaEt?pid=Api&h=220&P=0">
-                <h3>NASA Shuts Off Instrument on Voyager 1</h3></div>
-            <div class="side-stack">
-                <div class="card small">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.CqApLBLvk-SWvLyhnE27LQHaEK?pid=Api&h=220&P=0">
-                    <h3>NASA CubeSats Advance Space Weather</h3></div>
-                <div class="card small">
-                    <img src="https://instagrammernews.com/image/CCedW8Cg0h8">
-                    <h3>NASA Heliophysics Spacecraft Witness Comet</h3></div>
-            </div>
-        </div>
-    </section>
-    <section class="bottom-news-section">
-    <div class="news-item">
-        <img src="https://mars.nasa.gov/layout/mars2020/images/PIA23764-RoverNamePlateonMars-web.jpg" alt="NASA logo" class="circle-img">
-        <div class="news-content">
-            <span class="read-time">2 MIN READ</span>
-            <p>NASA Begins Implementation for ESA’s Rosalind Franklin Mission to Mars</p>
-            <span class="tag">BLOG</span>
-        </div>
-    </div>
-
-    <div class="news-item">
-        <img src="https://bloximages.newyork1.vip.townnews.com/thepress.net/content/tncms/assets/v3/editorial/0/ec/0ec1cf3a-d2ab-5367-b3e9-a54b7a8939c0/69e10ea94bb2c.image.jpg?crop=1920%2C1008%2C0%2C35&resize=1200%2C630&order=crop%2Cresize" alt="NASA logo" class="circle-img">
-            <span class="read-time">2 MIN READ</span>
-            <p>NASA's Parker Solar Probe Finds Surprises in an Explosion Near the Sun</p>
-            <span class="tag">BLOG</span>
-        </div>
-    </div>
-
-    <div class="news-item">
-        <img src="https://tse2.mm.bing.net/th/id/OIF.rr4hrAvgTin7YIP7VkSWzw?pid=Api&h=220&P=0" alt="NASA logo" class="circle-img">
-        <div class="news-content">
-            <span class="read-time">6 MIN READ</span>
-            <p>‘Interstellar Glaciers’: NASA’s SPHEREx Maps Vast Galactic Ice Regions</p>
-            <span class="tag">ARTICLE</span>
-        </div>
-    </div>
-
-    <div class="news-item">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.rC6vH2CE25s0XD8QQZkkWQAAAA?pid=Api&h=220&P=0" alt="NASA logo" class="circle-img">
-        <div class="news-content">
-            <span class="read-time">3 MIN READ</span>
-            <p>What's Up: April 2026 Skywatching Tips from NASA</p>
-            <span class="tag">ARTICLE</span>
-        </div>
-    </div>
-</section> -->
-<!-- <section class="hero-section">
-    <div class="content-wrapper">
-        <div class="text-content">
-            <h1>Advancing Earth Observation</h1>
-            <p>When NASA's Apollo 8 crew rounded the far side of the Moon in 1968, astronaut Bill Anders captured an image of Earth rising above the gray horizon — a photograph that quickly became a symbol of hope. Known as Earthrise, the image helped inspire the first Earth Day celebration two years later.</p>
-            <a href="#" class="cta-link">NASA's View of Our Home Planet &rarr;</a>
-        </div>
-        <div class="image-content">
-            <img src="your-earth-image.jpg" alt="Earth Observation">
-        </div>
-    </div>
-</section> -->
-<section class="hero">
-  <div class="overlay"></div>
-
-  <div class="content">
-    <h1>Advancing Earth<br>Observation</h1>
-
-    <p>
-      When NASA’s Apollo 8 crew rounded the far side of the Moon in 1968,
-      astronaut Bill Anders captured an image of Earth rising above the gray
-      horizon — a photograph that quickly became a symbol of hope.
-    </p>
-
-    <div class="btn">
-      ➜
-    </div>
-  </div>
-</section>
-<section class="missions">
-
-  <div class="top-bar">
-    <h2>NASA Missions</h2>
-    <a href="#" class="discover">
-      Discover More <span>➜</span>
-    </a>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.ib1DSGVvTBCmPszOjvj9FwHaE8?pid=Api&h=220&P=0" alt="">
-      <div class="overlay"></div>
-      <div class="text">
-        <h3>Communicating<br>with Missions</h3>
-        <span>➜</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.KeuwknCgfOqNj6pr6lTgmgEsDI?pid=Api&h=220&P=0" alt="">
-      <div class="overlay"></div>
-      <div class="text">
-        <h3>Artemis</h3>
-        <span>➜</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://cdn.mos.cms.futurecdn.net/BupVfi64bPD97aAZD3YSGQ-1200-80.jpg" alt="">
-      <div class="overlay"></div>
-      <div class="text">
-        <h3>Science<br>Missions</h3>
-        <span>➜</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.J4ReCIMNxukgwQcL0vwn-wHaEm?pid=Api&h=220&P=0" alt="">
-      <div class="overlay"></div>
-      <div class="text">
-        <h3>Spaceships<br>and Rockets</h3>
-        <span>➜</span>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-<section class="image-of-day">
-  <div class="image-text">
-    <p class="date-label">TODAY</p>
-    <h1>Image Of The Day</h1>
-
-    <h3>The Day of the Trifid Nebula</h3>
-    <p>
-      NASA celebrates Hubble’s 36th anniversary with a new image of the Trifid Nebula, 
-      a star-forming region it first captured in 1997. The telescope leveraged almost 
-      its full operational lifetime to show us changes in the nebula on human time scales 
-      with an improved camera.
-    </p>
-
-    <a href="#" class="archive-link">Browse Image Archive <span>→</span></a>
-  </div>
-
-  <div class="image-box">
-    <img src="https://tse2.mm.bing.net/th/id/OIP.elJdYhhH7NRhGtB8fFuB3gHaF3?pid=Api&h=220&P=0" alt="The Day of the Trifid Nebula">
-    <a href="#" class="view-link">View image <span>→</span></a>
-  </div>
-</section>
-<section class="more-nasa-images">
-  <h2>More NASA Images</h2>
-
-  <div class="image-gallery">
-    <!-- Gallery Card 1 -->
-    <div class="gallery-card">
-      <div class="gallery-grid">
-        <div class="large">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.deD5sBSdGznP4RlUjAZh4wHaF7?pid=Api&h=220&P=0" alt="">
-        </div>
-        <div class="small-grid">
-          <img src="https://tse1.mm.bing.net/th/id/OIF.e5eWwdQZ4rRBwipF0qG7Tw?pid=Api&h=220&P=0" alt="">
-          <img src="https://tse1.mm.bing.net/th?id=OIF.jAVnWS%2ft3gKva5vpDGYVJw&pid=Api&h=220&P=0" alt="">
-        </div>
-      </div>
-      <h4>Artemis II Splashdown and Recovery Gallery</h4>
-      <p>70 IMAGES</p>
-    </div>
-
-    <!-- Gallery Card 2 -->
-    <div class="gallery-card">
-      <div class="gallery-grid">
-        <div class="large">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.mKufLYwB5xxaD5DYqtEFOAHaFj?pid=Api&h=220&P=0" alt="">
-        </div>
-        <div class="small-grid">
-          <img src="https://tse2.mm.bing.net/th/id/OIP.GhgeiEKMNBGq65yDw3cB9AHaEo?pid=Api&h=220&P=0" alt="">
-          <img src="https://www.crbcnews.com/_next/image?url=https:%2F%2Fsvetvesti-prod.s3.eu-west-1.amazonaws.com%2Farticle-images-prod%2F69780fe5e095c282eebd90ed.jpg&w=1200&q=75" alt="">
-        </div>
-      </div>
-      <h4>Artemis II Lunar Flyby Gallery</h4>
-      <p>86 IMAGES</p>
-    </div>
-
-    <!-- Gallery Card 3 -->
-    <div class="gallery-card">
-      <div class="gallery-grid">
-        <div class="large">
-          <img src="https://tse1.mm.bing.net/th/id/OIP.GZts1pQa-66beEW1Gxg1GwHaEK?pid=Api&h=220&P=0" alt="">
-        </div>
-        <div class="small-grid">
-          <img src="https://tse2.mm.bing.net/th/id/OIP.-ud6qWs-vASiKpsYpVx6EQHaEK?pid=Api&h=220&P=0" alt="">
-          <img src="https://tse4.mm.bing.net/th/id/OIP.XTM6gZZJAZDCVIf4kK8_YQHaE7?pid=Api&h=220&P=0" alt="">
-        </div>
-      </div>
-      <h4>Artemis II Launch Gallery</h4>
-      <p>27 IMAGES &nbsp; • &nbsp; 1 VIDEO</p>
-    </div>
-  </div>
-</section>
-<section class="nasa-newsletter">
-  <div class="container">
-    <div class="text-content">
-      <h1>Explore the<br>Universe from<br>your Inbox</h1>
-      <p class="description">Stay up-to-date on the latest news from NASA—from Earth to the Moon, the Solar System and beyond.</p>
-      <p class="disclaimer">We will never share your email address. <a href="#" class="privacy-link">Privacy Policy</a></p>
-      
-      <div class="signup-cta">
-        <span>Sign Up</span>
-        <div class="arrow-circle">
-          <span class="arrow">→</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="nasa-card">
-  <div class="container">
-    <div class="text-side">
-      <span class="label">Freedom 250</span>
-      <h2>NASA Celebrates America’s 250th Birthday</h2>
-      <p class="highlight">Our spirit of adventure and innovation will raise our nation to new heights.</p>
-      <p class="body-text">From the earliest days of exploration, to the first steps on the Moon and the missions shaping our future, NASA represents the spirit of discovery that defines our nation. As the United States approaches its semiquincentennial, Freedom 250 highlights how innovation, courage, and scientific leadership have carried America forward — and how NASA continues to expand the frontier for the next generation.</p>
-      <a href="#" class="learn-more">Learn More <span class="arrow">→</span></a>
-    </div>
-
-    <div class="image-side">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.fZTLrtrf3_kz_-F75DQZtQHaEB?pid=Api&h=220&P=0" alt="X-59">
-      <p class="caption">NASA's X-59 is helping the nation celebrate the 250th anniversary of its independence with an update to its livery – its official paint job and insignia. The X-59 has sported a Freedom 250 logo on its engine since its second flight, and it will continue showing off the new detail with every upcoming test flight.</p>
-      <p class="credit">NASA/Carla Thomas</p>
-    </div>
-  </div>
-</section>
-<h1 class="section-title">More Topics from NASA</h1>
-<div class="nasa-grid">
-    <div class="card" style="background-image: url('https://images-assets.nasa.gov/image/NHQ202503140021/NHQ202503140021~large.jpg?w=1920&h=1315&fit=clip&crop=faces%2Cfocalpoint');">
-        <div class="card-text">
-            <h3>Missions</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-    
-    <div class="card" style="background-image: url('https://images-assets.nasa.gov/image/iss038e020234/iss038e020234~large.jpg?w=1920&h=1275&fit=clip&crop=faces%2Cfocalpoint');">
-        <div class="card-text">
-            <h3>Humans In Space</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-
-    <div class="card" style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.wu3QGpvleDvfZOpqTf4-jQHaHa?pid=Api&h=220&P=0');">
-        <div class="card-text">
-            <h3>Earth</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-
-    <div class="card" style="background-image: url('https://c8.alamy.com/comp/2PY0YCY/solar-system-illustration-elements-of-this-image-furnished-by-nasa-3d-illustration-2PY0YCY.jpg');">
-        <div class="card-text">
-            <h3>Our Solar System</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-
-    <div class="card" style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.3lWJH1mjdXGAI5pqRuAl6QHaE6?pid=Api&h=220&P=0');">
-        <div class="card-text">
-            <h3>Technology</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-
-    <div class="card" style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.6HCFSWhmooAnnEWOVBdnFwHaG_?pid=Api&h=220&P=0');">
-        <div class="card-text">
-            <h3>Universe</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-
-    <div class="card" style="background-image: url('https://assets.science.nasa.gov/dynamicimage/assets/science/cds/creative/smd-fleet/SMD_FLEET_OPERATING_CROSS-DIRECTORATE_DEC_2025_PRINT.jpg?w=4001&h=2250&fit=clip&crop=faces%2Cfocalpoint');">
-        <div class="card-text">
-            <h3>Sience Missions</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-
-    <div class="card" style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.WHDNvg9_cCuvx7_oDg-UUAHaE7?pid=Api&h=220&P=0');">
-        <div class="card-text">
-            <h3>Aeronautics</h3>
-            <div class="btn-arrow">→</div>
-        </div>
-    </div>
-</div>
-
-<footer class="nasa-footer">
-    <div class="footer-content">
-        <div class="col logo-col">
-            <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA" class="logo">
-            <h2>National Aeronautics and Space Administration</h2>
-            <p>NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.</p>
-            <a href="#" class="about-link">About NASA's Mission</a>
-            <a href="#" class="join-link">Join Us <span class="arrow">→</span></a>
-        </div>
-
-        <div class="col">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">News & Events</a></li>
-                <li><a href="#">Multimedia</a></li>
-                <li><a href="#">NASA+ <span class="live-tag">LIVE</span></a></li>
-                <li><a href="#">Missions</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul>
-                <li><a href="#">Humans in Space</a></li>
-                <li><a href="#">Earth</a></li>
-                <li><a href="#">The Solar System</a></li>
-                <li><a href="#">The Universe</a></li>
-                <li><a href="#">Science</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul>
-                <li><a href="#">Aeronautics</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">Learning Resources</a></li>
-                <li><a href="#">About NASA</a></li>
-                <li><a href="#">NASA en Español</a></li>
-            </ul>
-        </div>
-
-        <div class="col social-col">
-            <h3>Follow NASA</h3>
-            <div class="social-icons">
-                <a href="#">f</a> <a href="#">in</a> <a href="#">x</a> <a href="#">yt</a>
-            </div>
-            <a href="#" class="extra-link">More NASA Social Accounts</a>
-            <a href="#" class="extra-link">NASA Newsletters</a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <ul class="bottom-links">
-            <li>Sitemap</li><li>For Media</li><li>Privacy Policy</li><li>FOIA</li><li>No FEAR Act</li>
-            <li>Office of the IG</li><li>Budget & Annual Reports</li><li>Agency Financial Reports</li><li>Contact NASA</li><li>Accessibility</li>
-        </ul>
-        <p class="meta-data">Page Last Updated: <strong>Apr 25, 2026</strong> | Page Editor: <strong>Dacia Massengill</strong> | Responsible NASA Official: <strong>Abigail Bowman</strong></p>
-    </div>
-</footer>
-
+   
 </body>
-</html>     
+</html
