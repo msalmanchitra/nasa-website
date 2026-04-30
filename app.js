@@ -1,4 +1,4 @@
-  const hamburger = document.getElementById('hamburger');
+ const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const searchIcon = document.getElementById('searchIcon');
     const mobileSearchBar = document.getElementById('mobileSearchBar');
@@ -19,3 +19,4 @@
     closeSearch.addEventListener('click', () => {
       mobileSearchBar.classList.remove('active');
     });
+  
